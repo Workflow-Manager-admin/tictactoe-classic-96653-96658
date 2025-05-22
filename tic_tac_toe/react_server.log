@@ -48,3 +48,6 @@ src/components/TicTacToe.js
   Line 48:10:  'squares' is assigned a value but never used  no-unused-vars
 
 webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully

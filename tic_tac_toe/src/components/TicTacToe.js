@@ -44,9 +44,6 @@ const calculateWinner = (squares) => {
  * @returns {JSX.Element} - Rendered TicTacToe component
  */
 function TicTacToe() {
-  // State for the squares on the board
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  
   // State to track whose turn it is
   const [xIsNext, setXIsNext] = useState(true);
   
@@ -95,7 +92,6 @@ function TicTacToe() {
     // Update the game state
     setHistory([...historyCopy, squaresCopy]);
     setStepNumber(historyCopy.length);
-    setSquares(squaresCopy);
     setXIsNext(!xIsNext);
   };
 
@@ -105,7 +101,6 @@ function TicTacToe() {
   const resetGame = () => {
     setHistory([Array(9).fill(null)]);
     setStepNumber(0);
-    setSquares(Array(9).fill(null));
     setXIsNext(true);
   };
 
