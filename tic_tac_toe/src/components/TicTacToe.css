@@ -1,0 +1,107 @@
+/* TicTacToe Container */
+.tictactoe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.game-title h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.game-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* Game Layout */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .game {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  background-color: var(--border-color);
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.square {
+  background-color: #2A2A2A;
+  border: none;
+  border-radius: 4px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  height: 80px;
+  width: 80px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.square:hover {
+  background-color: #333333;
+}
+
+/* Game Info */
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 200px;
+}
+
+.status {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.reset-btn {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .square {
+    height: 60px;
+    width: 60px;
+    font-size: 2rem;
+  }
+}
